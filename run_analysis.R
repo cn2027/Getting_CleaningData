@@ -33,7 +33,6 @@ tidy.dataset <- rbind(full.train.set,full.test.set)
 #Use descriptive activity names to name the activities in the data set
 tidy.dataset$activity.Name<-as.character(activity.labels$activity.Name[match(tidy.dataset$activity.ID,activity.labels$activity.ID)])
 #Extract only the measurements on the mean and standard deviation for each measurement. 
-require(PerformanceAnalytics)
 tidy.mean<-subset(tidy.dataset[,grep("mean",colnames(tidy.dataset))])
 tidy.Mean<-subset(tidy.dataset[,grep("mean",colnames(tidy.dataset))])
 tidy.std<-subset(tidy.dataset[,grep("mean",colnames(tidy.dataset))])
